@@ -1,0 +1,112 @@
+
+{% extends 'base.html' %}
+
+{% block titulo %} Upline {% endblock %}
+
+{% block contenido %}
+
+{% load static %}
+
+<header>
+    <nav class="barra-menu fixed-top">
+        <div class="logo">
+            <a href="{% url 'inicio'%}">
+                <img src="../static/assets/Media/img/logo-upline-blanco.png" alt="" width="40">
+            </a>
+        </div>
+        <div class="items">
+            <ul>
+                <li><a href="mockups.html" class="link-item">Aplicación</a></li>
+                <li><a class="link-item">Presentación <i class="fas fa-angle-down"></i></a>
+                    <ul class="desplegable">
+                        <li><a href="esquema.html">Base de datos</a></li>
+                        <li><a href="diccionario-datos.html">Diccionario de datos </a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'nosotros'%}" class="link-item">Quiénes somos</a></li>
+                <li><a href="{% url 'contacto'%}" class="link-item">Contáctenos</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<section class="contactanos mt-5">
+    <div class="container mt-3" id="contactenos">
+        <h2 class="titulo-contacto mb-4">Contáctanos</h2>
+        <h3 class="subtitulo-p mb-5">Tienes alguna duda, opinión o quieres saber más, ¡Escribenos!</h3>
+        <div>
+           <!-- <form action="" method="POST">
+                {% csrf_token %}
+                {{ formulario.as_p }}
+                <input class="btn btn-secondary mt-3 ml-3" type="submit" name="sndmsj" value="Enviar">
+                {{ request.POST }}
+            </form>-->
+            <form class="formulario" method="POST">
+                {% csrf_token %}
+                <div class="form-group col-sm-8">
+                  <label for="nombre">Nombre:</label>
+                  {{ formulario.nombre }}
+                </div>
+                <div class="form-group col-sm-8">
+                    <label for="asunto">Asunto:</label>
+                    {{ formulario.asunto }}
+                  </div>
+                <div class="form-group col-sm-8">
+                  <label for="correo">Correo electrónico:</label>
+                   {{ formulario.correo }}
+                </div>
+                <div class="form-group col-sm-8">
+                    <label for="descripcion">Descripción: </label>
+                    {{ formulario.descripcion }}
+                  </div>
+                  <div class="form-group col-md-8">
+                      <div class="row">
+                      <span class="col-md-10">
+                        {% if 'ok' in request.GET %}
+                            <span class="text-success">Hemos recibido tu mensaje</span>
+                        {% endif %}
+
+                        {% if 'fail' in request.GET %}
+                            <span class="text-danger">No se pudo enviar tu mensaje. Prueba enviándolo más tarde.</span>
+                        {% endif %}
+                      </span>
+                      <div class="col-2">
+                        <input class="btn btn-secondary" type="submit" value="Enviar">
+                      </div>
+                    </div>
+                  </div>
+              </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="row">
+        <div class="col-6">
+            <img src="../static/assets/Media/img/logo-upline-blanco.png" class="img1" width="40">
+            <img src="../static/assets/Media/img/logo-blanco.png" class="img2" width="100">
+            <br><br>
+            &copy; Desarrollado por los miembros colaboradores de UPLINE
+        </div>
+        <div class="col-3">
+            <h4>Contacto:</h4>
+            <p>
+                <div class="correos">
+                    <i class="far fa-envelope"></i> natagarge@hotmail.com
+                    <br><br>
+                    <i class="far fa-envelope"></i> nozon33_yt@hotmail.com
+                </div>
+            </p>
+        </div>
+        <div class="3">
+            <h4>Descubre más de nosotros </h4>
+            <div class="caja-redes">
+                <a href="#" class="redes"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="redes"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="redes"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+{% endblock %}

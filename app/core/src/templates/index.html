@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Upline {% endblock %}
+
+{% block contenido %}
+
+{% load static %}
+
+<header>
+    <nav class="barra-menu fixed-top">
+        <div class="logo">
+            <a href="{% url 'inicio'%}">
+                <img src="../static/assets/Media/img/logo-upline-blanco.png" alt="" width="40">
+            </a>
+        </div>
+        <div class="items">
+            <ul>
+                <li><a href="mockups.html" class="link-item">Aplicación</a></li>
+                <li><a class="link-item">Presentación <i class="fas fa-angle-down"></i></a>
+                    <ul class="desplegable">
+                        <li><a href="esquema.html">Base de datos</a></li>
+                        <li><a href="diccionario-datos.html">Diccionario de datos </a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'nosotros'%}" class="link-item">Quiénes somos</a></li>
+                <li><a href="{% url 'contacto'%}" class="link-item">Contáctenos</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="encabezado">
+    <div class="textos">
+        <h1 class="titulo">Te presentamos <img src="../static/assets/Media/img/logo-blanco.png" width="170"></h1>
+        <h3 class="subtitulo">Una red social para los programadores que buscan un espacio para aprender mientras se relacionan con otros.</h3>
+        <button href="#" class="boton">Previsualización de la aplicación</button>
+    </div>
+    <div class="sesgoabajo"></div>
+</div>
+
+<main>
+    <section class="aplicacion">
+        <div class="contenedor">
+            <h2 class="titulo-aplicacion">¿Qué es UPLINE?</h2>
+            <p class="parrafo">
+                La aplicación que en español traduce línea arriba, hace referencia
+                a que es una red social dirigida a los desarrolladores de software, en donde pueden hablar,
+                opinar y compartir fragmentos de código que podrían ser útiles para otros programadores.
+                Y a su vez, cuenta con una sección dirigida al sector laboral en la cual empresas harán
+                parte de la comunidad y se podrán establecer relaciones laborales por medio de la aplicación.
+            </p>
+            <p class="parrafo">
+                UPLINE busca cumplir las funcionalidades básicas de una red social, satisfaciendo
+                las necesidades del usuario, siendo estas:
+            </p>
+            <div class="cont-tarjetas">
+                <div class="tarjeta">
+                    <img src="../static/assets/Media/img/publicar.png">
+                    Publicar contenido
+                </div>
+                <div class="tarjeta">
+                    <img src="../static/assets/Media/img/reaccion.png">
+                    Interactuar con el contenido de las publicaciones
+                </div>
+                <div class="tarjeta">
+                    <img src="../static/assets/Media/img/relacionarse.png">
+                    Relacionarse con otros usuarios
+                </div>
+            </div>
+            <a href="#" class="boton">Ver más...</a>
+        </div>
+    </section>
+
+    <section class="miembros">
+        <div class="sesgoarriba"></div>
+        <div class="contenedor" id="miembros">
+            <h2 class="quienes-somos">Quiénes somos</h2>
+            <h3 class="slogan">Conoce a quienes hacemos parte de esta aplicación</h3>
+            <div class="cards">
+                <div class="card-miembros">
+                    <img src="../static/assets/Media/img/natalia.jpg" alt="Natalia" width="300">
+                    <h4>Natalia Garnica G.</h4>
+                    <p>18 años - Bello</p>
+                    <h5>Frontend y Backend</h5>
+                </div>
+                <div class="card-miembros">
+                    <img src="../static/assets/Media/img/luis.jpg" alt="Luis" width="300">
+                    <h4>Luis Pablo Góez S.</h4>
+                    <p>18 años - Bello</p>
+                    <h5>Frontend y Backend</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<footer>
+    <div class="row">
+        <div class="col-6">
+            <img src="../static/assets/Media/img/logo-upline-blanco.png" class="img1" width="40">
+            <img src="../static/assets/Media/img/logo-blanco.png" class="img2" width="100">
+            <br><br>
+            &copy; Desarrollado por los miembros colaboradores de UPLINE
+        </div>
+        <div class="col-3">
+            <h4>Contacto:</h4>
+            <p>
+                <div class="correos">
+                    <i class="far fa-envelope"></i> natagarge@hotmail.com
+                    <br><br>
+                    <i class="far fa-envelope"></i> nozon33_yt@hotmail.com
+                </div>
+            </p>
+        </div>
+        <div class="3">
+            <h4>Descubre más de nosotros </h4>
+            <div class="caja-redes">
+                <a href="#" class="redes"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="redes"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="redes"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+{% endblock %}

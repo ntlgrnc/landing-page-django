@@ -1,0 +1,134 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    margin-top: 7%;
+}
+
+.barra-menu {
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    position: fixed;
+    font-family: 'Poppins', sans-serif;
+    background: #303F9F;
+    color: #FFF;
+}
+
+.logo{
+    position: relative;
+    bottom: 1%;
+    width: 100px;
+}
+
+.items{
+    position: absolute;
+    right: 50px;
+    bottom: 3px;
+}
+
+.barra-menu ul{
+    list-style: none;
+}
+
+.barra-menu ul li {
+	display:inline-block;
+	position: relative;
+}
+
+.barra-menu ul li a{
+	display: block;
+    padding: 0 30px;
+    color: #FFFFFF;
+}
+
+.barra-menu ul li a:hover{
+    color: rgb(134, 63, 241);
+}
+
+.barra-menu ul li a:hover{
+    text-decoration: none;
+}
+
+.barra-menu ul li:hover .desplegable {
+	display:block;
+}
+ 
+.barra-menu ul li .desplegable {
+    display: none;
+    border-radius: 2px;
+	background:#ffffff;
+	position: absolute;
+    width: 120%;
+    padding: 0;
+    height: 87px;
+    z-index:1000;
+}
+ 
+.barra-menu ul li .desplegable li {
+	display:block;
+	overflow: hidden;
+    padding: 10px;
+}
+
+.barra-menu ul li .desplegable li:hover{
+    background: #303F9F;
+    color: #FFF;
+}
+ 
+.barra-menu ul li .desplegable li a {
+    display: block;
+    padding: 0;
+    color: #6600FF;
+}
+
+.barra-menu ul li .desplegable li a:hover{
+    color: #FFF ;
+}
+
+.card-tabla{
+    border: 1px #D1C4E9 solid;
+    border-radius: 5px;
+    color: #330099;
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    padding: 5px;
+}
+
+.card-tabla .marca{
+    background: #330099;
+    width: 45px;
+    height: 44px;
+    margin-top: -5px;
+    margin-left: -5px;
+    position: absolute;
+    border-radius: 5px 0px 0px 5px;
+}
+
+
+abbr {
+    cursor: help;
+}
+
+
+tr:hover {
+    color: #333;
+    background-color: #F3E5F5;
+}
+
+th {
+    background-color: #D1C4E9;
+    color: #330099;
+    font-family: 'Gotu', sans-serif;
+}
+
+td {
+    color: gray;
+}
+
+.footer{
+    width: 100%;
+    height: 20px;
+    padding: 5px;
+    font-family: 'Baloo 2', cursive;
+    color: #000000;
+}
